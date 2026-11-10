@@ -1,6 +1,6 @@
 --[[
-	Project: Sploitware HUB (Ultimate 100x Edition)
-	Creator: Sploitware with help of Gemini
+	Project: Sploitware HUB
+	Creator: Sploitware
 ]]--
 
 local Players = game:GetService("Players")
@@ -135,7 +135,7 @@ SubTitle.Size = UDim2.new(1, 0, 0, 20)
 SubTitle.Position = UDim2.new(0, 0, 0, 128)
 SubTitle.BackgroundTransparency = 1
 SubTitle.Font = Enum.Font.Gotham
-SubTitle.Text = "Created by Sploitware with help of Gemini"
+SubTitle.Text = "Created by Sploitware"
 SubTitle.TextColor3 = Color3.fromRGB(150, 150, 150)
 SubTitle.TextSize = 12
 SubTitle.Parent = LoadContainer
@@ -247,12 +247,6 @@ CloseBtn.Text = "×"
 CloseBtn.TextColor3 = Color3.fromRGB(180, 180, 180)
 CloseBtn.TextSize = 24
 CloseBtn.Parent = Topbar
-
-CloseBtn.MouseButton1Click:Connect(function()
-	MainWin.Visible = false
-	FloatBtn.Visible = true
-	notify("Sploitware HUB", "Minimized to floating icon", 1.5)
-end)
 
 -- Sidebar & Content Area
 local Sidebar = Instance.new("Frame")
@@ -498,7 +492,7 @@ local flying = false
 local flySpeed = 50
 local bg, bv
 
-addToggle(playerTab, "Enable Inertia Flight (PC + Mobile)", function(state)
+addToggle(playerTab, "Fly", function(state)
 	flying = state
 	local char = LocalPlayer.Character
 	if not char or not char:FindFirstChild("HumanoidRootPart") then return end
@@ -765,7 +759,7 @@ local aboutLabel = Instance.new("TextLabel")
 aboutLabel.Size = UDim2.new(1, 0, 0, 140)
 aboutLabel.BackgroundTransparency = 1
 aboutLabel.Font = Enum.Font.GothamMedium
-aboutLabel.Text = "SPLOITWARE HUB\n\nCreated By Sploitware\nwith the help of Gemini\n\nVersion: 5.0 Ultimate 100x Edition"
+aboutLabel.Text = "SPLOITWARE HUB\n\nCreated By Sploitware\n\nVersion: 1.0"
 aboutLabel.TextColor3 = Color3.fromRGB(220, 220, 220)
 aboutLabel.TextSize = 14
 aboutLabel.TextWrapped = true
